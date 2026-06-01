@@ -1,8 +1,8 @@
 +++
-title = "Blog Posts"
-sort_by = "date"
-template = "blog.html"
-page_template = "blog-page.html"
+title = "Blog"
+description = "Blog posts"
+template = "section.html"
+page_template = "page.html"
+sort_by = "date" 
+paginate_by = 5
 +++
-
-Welcome to my blog.

@@ -3,4 +3,4 @@ title = "Home"
 template = "index.html"
 +++
 
-Welcome to my blog!
+This blog documents my work with Linux, containers, and experiments with various technologies. All opinions expressed are my own.
