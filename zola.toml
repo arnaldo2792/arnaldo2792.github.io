@@ -1,0 +1,17 @@
+base_url = "https://127.0.0.1"
+title = "My Blog"
+description = "A blog about things"
+default_language = "en"
+
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+minify_html = false
+
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categories" },
+]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
