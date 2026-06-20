@@ -1,0 +1,70 @@
+base_url = "https://127.0.0.1"
+title = "Arnaldo Garcia"
+description = ""
+default_language = "en"
+
+build_search_index = true
+generate_feeds = true
+minify_html = false
+
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categories" },
+]
+
+theme = "blow"
+
+[extra]
+enable_search = true
+enable_sidebar = false
+enable_adsense = false
+enable_multilingue = true
+
+[extra.lang]
+items = [
+    { lang = "en", links = [
+        { base_url = "/", name = "English" },
+    ] },
+]
+
+[extra.navbar]
+items = [
+    { lang = "en", links = [
+        { url = "/", name = "Home" },
+        { url = "/blog", name = "Blog" },
+        { url = "/categories", name = "Categories" },
+        { url = "/tags", name = "Tags" },
+    ] },
+]
+title = "Arnaldo Garcia"
+
+# Index page
+[extra.index]
+title = "Arnaldo Garcia"
+image = "/img/avatar.png"
+image_alt = "Placeholder text describing the index's image."
+
+[extra.default_author]
+name = "Arnaldo Garcia Rincon"
+avatar = "/img/avatar.png"
+avatar_alt = ""
+
+[extra.social]
+codeberg = ""
+github = "https://github.com/arnaldo2792"
+gitlab = ""
+twitter = ""
+mastodon = ""
+linkedin = ""
+stackoverflow = "" 
+telegram = ""
+email = ""
+
+[extra.favicon]
+favicon = "/icons/favicon.ico"
+favicon_16x16 = "/icons/favicon-16x16.png"
+favicon_32x32 = "/icons/favicon-32x32.png"
+apple_touch_icon = "/icons/apple-touch-icon.png"
+android_chrome_512 = "/icons/android-chrome-512x512.png"
+android_chrome_192 = "/icons/android-chrome-192x192.png"
+manifest = "/icons/site.webmanifest"
