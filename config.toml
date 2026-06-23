@@ -12,59 +12,28 @@ taxonomies = [
   { name = "categories" },
 ]
 
-theme = "blow"
-
-[extra]
-enable_search = true
-enable_sidebar = false
-enable_adsense = false
-enable_multilingue = true
-
-[extra.lang]
-items = [
-    { lang = "en", links = [
-        { base_url = "/", name = "English" },
-    ] },
-]
+[extra.footer]
+include_cc_license = true
 
 [extra.navbar]
 items = [
-    { lang = "en", links = [
-        { url = "/", name = "Home" },
-        { url = "/blog", name = "Blog" },
-        { url = "/categories", name = "Categories" },
-        { url = "/tags", name = "Tags" },
-    ] },
+  { url = "/", name = "Home" },
+  { url = "/blog", name = "Blog" },
+  { url = "/categories", name = "Categories" },
+  { url = "/tags", name = "Tags" },
+  { url = "/tags", name = "Contact" },
 ]
 title = "Arnaldo Garcia"
 
 # Index page
 [extra.index]
 title = "Arnaldo Garcia"
-image = "/img/avatar.png"
-image_alt = "Placeholder text describing the index's image."
+messages = [
+  { text = "This blog documents my work with Linux, containers,", duration = "2s", steps = 49, delay = "0s"},
+  { text = "and experiments with various technologies.", duration = "1.8s", steps = 40, delay = "2s" },
+  { text = "All opinions expressed are my own.", duration = "1.5s", steps = 30, delay = "3.8s" , bold = true }
+]
 
-[extra.default_author]
-name = "Arnaldo Garcia Rincon"
-avatar = "/img/avatar.png"
-avatar_alt = ""
-
-[extra.social]
+[extra.contact]
 codeberg = ""
 github = "https://github.com/arnaldo2792"
-gitlab = ""
-twitter = ""
-mastodon = ""
-linkedin = ""
-stackoverflow = "" 
-telegram = ""
-email = ""
-
-[extra.favicon]
-favicon = "/icons/favicon.ico"
-favicon_16x16 = "/icons/favicon-16x16.png"
-favicon_32x32 = "/icons/favicon-32x32.png"
-apple_touch_icon = "/icons/apple-touch-icon.png"
-android_chrome_512 = "/icons/android-chrome-512x512.png"
-android_chrome_192 = "/icons/android-chrome-192x192.png"
-manifest = "/icons/site.webmanifest"
