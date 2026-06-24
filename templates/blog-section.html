@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block main %}
+  <main class="max-w-10xl mx-auto w-full mb-auto">
+    <section class="flex items-center flex-col mt-10 border-b border-green/50">
+      <h1 class="text-3xl md:text-4xl text-bold mb-6 glitch" data-text="{{section.title | upper}}">
+        {{section.title | upper}}
+      </h1>
+    </section>
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 gap-8">
+          <div class="lg:col-span-2">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {% for page in paginator.pages %}
+                <div class="group bg-gray border border-green/30 rounded-lg p-6 hover:border-green transition-colors duration-300">
+                  <h3 class="text-xl font-bold hover:text-white mb-2">{{ page.title }}</h3>
+                  <p class="text-green/80 mb-4 text-sm">
+                    {{page.description}}
+                  </p>
+                  <div class="flex justify-between text-sm text-green/80 mb-4">
+                    <span>{{page.date | date(format="%B %d, %Y")}}</span>
+                  </div>
+                  <a href="{{page.permalink}}" class="text-green hover:text-white transition-colors duration-300 text-sm flex">
+                    <span>READ MORE</span>
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 duration-300"></i>
+                  </a>
+                </div>
+              {% endfor %}
+          </div>
+          {% if paginator.previous or paginator.next %}
+            <div class="mt-12 flex items-center justify-center">
+              <ul class="flex gap-x-2 mx-auto">
+                <li>
+                  <a href="#" class="py-2 border border-green/30 text-green bg-dark/80 font-bold rounded hover:bg-green/10 transition-colors duration-300 text-sm">Previous</a>
+                </li>
+                <li>
+                  <a href="#" class="py-2 border border-green/30 text-green bg-dark/80 font-bold rounded hover:bg-green/10 transition-colors duration-300 text-sm">Next</a>
+                </li>
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock main %}

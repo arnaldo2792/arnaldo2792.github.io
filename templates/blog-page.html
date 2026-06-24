@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.30.0/themes/prism-okaidia.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% endblock head %}
+
+{% block main %}
+  <main class="max-w-10xl mx-auto w-full mb-auto">
+    <section class="pt-16 pb-20 bg-gray border-y">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-5xl mx-auto">
+          <div class="text-center mb-12">
+            <div class="inline-block px-3 py-1 bg-dark/50 border border-green rounded-lg mb-4">
+              {{page.date | date(format="%B %d, %Y")}}
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 glitch" data-text="{{page.title | upper}}">
+              {{page.title | upper }}
+            </h1>
+          </div>
+
+          <div class="p-8 bg-dark border border-green/30 rounded-lg text-green/90 leading-relaxed mb-8">
+            <div class="post-content">
+              {{page.content | safe}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+{% endblock main %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/combine/npm/prismjs@1.30.0,npm/prismjs@1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
+{% endblock scripts %}
